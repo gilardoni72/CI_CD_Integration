@@ -4,7 +4,8 @@ pipeline {
     registry = "gilardoni72/docker-test"
     registryCredential =  'docker-hub-registry'
   }
-	node("nodo"){
+	
+	agent nodo
 		stages{
 			
 			stage("GITHUB"){
@@ -26,7 +27,7 @@ pipeline {
 
 
 		}
-	}
+	
 }  
   
   
